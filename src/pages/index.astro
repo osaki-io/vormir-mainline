@@ -10,6 +10,7 @@ import { Logos } from '@/components/blocks/logos';
 import { ResourceAllocation } from '@/components/blocks/resource-allocation';
 import { BlogPreview } from '@/components/blocks/blog-preview';
 import { Testimonials } from '@/components/blocks/testimonials';
+import { WorkPreview } from '@/components/blocks/work-preview';
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
 
 
@@ -23,6 +24,7 @@ import DefaultLayout from '@/layouts/DefaultLayout.astro';
     <Features />
     <ResourceAllocation />
   </Background>
+  <WorkPreview />
   <Testimonials client:only='react'/>
   <BlogPreview />
   <Background variant="bottom">

@@ -27,7 +27,7 @@ const posts = [
 
 export const BlogPreview = () => {
   return (
-    <section className="pb-28 lg:pb-32">
+    <section className="py-28 lg:py-32">
       <div className="container">
         {/* Top dashed line */}
         <div className="relative flex items-center justify-center">
