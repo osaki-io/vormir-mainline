@@ -32,15 +32,16 @@ const works = [
 
 export const WorkPreview = () => {
   return (
-    <section className="py-28 lg:py-32">
-      <div className="container">
-        {/* Top dashed line */}
-        <div className="relative flex items-center justify-center">
-          <DashedLine className="text-muted-foreground" />
-          <span className="bg-background text-muted-foreground absolute px-3 font-mono text-sm font-medium tracking-wide max-md:hidden">
-            SELECTED WORK
-          </span>
-        </div>
+    <>
+      <section className="py-28 lg:py-32">
+        <div className="container">
+          {/* Top dashed line */}
+          <div className="relative flex items-center justify-center">
+            <DashedLine className="text-muted-foreground" />
+            <span className="bg-background text-muted-foreground absolute px-3 font-mono text-sm font-medium tracking-wide max-md:hidden">
+              SELECTED WORK
+            </span>
+          </div>
 
         {/* Header */}
         <div className="mt-10 flex items-end justify-between lg:mt-24">
@@ -110,10 +111,11 @@ export const WorkPreview = () => {
           </a>
         </div>
       </div>
-    </section>
-    <DashedLine
-      orientation="horizontal"
-      className="mx-auto max-w-[80%]"
-    />
+      </section>
+      <DashedLine
+        orientation="horizontal"
+        className="mx-auto max-w-[80%]"
+      />
+    </>
   );
 };
