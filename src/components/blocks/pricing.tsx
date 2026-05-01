@@ -11,40 +11,39 @@ import { cn } from "@/lib/utils";
 
 const plans = [
   {
-    name: "Free",
-    monthlyPrice: "$0",
-    yearlyPrice: "$0",
-    description: "Free for everyone",
+    name: "Advisory",
+    monthlyPrice: "$3k",
+    yearlyPrice: "$2.5k",
+    description: "For teams that need direction",
     features: [
-      "Unlimited members",
-      "2 teams",
-      "500 issues",
-      "Slack and Github integrations",
+      "Weekly strategy calls",
+      "Code & architecture review",
+      "Roadmap planning",
+      "Slack access",
     ],
   },
   {
-    name: "Startup",
-    monthlyPrice: "$8",
-    yearlyPrice: "$6",
+    name: "Embedded",
+    monthlyPrice: "$12k",
+    yearlyPrice: "$10k",
     features: [
-      "All free plan features and...",
-      "Mainline AI",
-      "Unlimited teams",
-      "Unlimited issues and file uploads",
-      "Mainline Insights",
-      "Admin roles",
+      "All Advisory features",
+      "2 senior engineers embedded",
+      "End-to-end delivery",
+      "CI/CD & infra setup",
+      "Priority support",
     ],
   },
   {
     name: "Enterprise",
-    monthlyPrice: "$8",
-    yearlyPrice: "$6",
+    monthlyPrice: "Custom",
+    yearlyPrice: "Custom",
     features: [
-      "All free plan features and...",
-      "Mainline AI",
-      "Supermainline AGI",
-      "Free daily catered lunch",
-      "random HIPPA audits",
+      "All Embedded features",
+      "Dedicated pod",
+      "Fractional CTO",
+      "SLA guarantees",
+      "On-site workshops",
     ],
   },
 ];
@@ -57,12 +56,10 @@ export const Pricing = ({ className }: { className?: string }) => {
       <div className="container max-w-5xl">
         <div className="space-y-4 text-center">
           <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-            Pricing
+            Simple, transparent pricing
           </h2>
           <p className="text-muted-foreground mx-auto max-w-xl leading-snug text-balance">
-            Use Mainline for free with your whole team. Upgrade to enable
-            unlimited issues, enhanced security controls, and additional
-            features.
+            No hidden fees. Scale up or down based on your needs. All plans include a 2-week trial.
           </p>
         </div>
 
@@ -71,7 +68,7 @@ export const Pricing = ({ className }: { className?: string }) => {
             <Card
               key={plan.name}
               className={`${
-                plan.name === "Startup"
+                plan.name === "Embedded"
                   ? "outline-primary origin-top outline-4"
                   : ""
               }`}
@@ -82,24 +79,23 @@ export const Pricing = ({ className }: { className?: string }) => {
                   <div className="space-y-1">
                     <div className="text-muted-foreground text-lg font-medium">
                       {isAnnual ? plan.yearlyPrice : plan.monthlyPrice}{" "}
-                      {plan.name !== "Free" && (
+                      {plan.name !== "Enterprise" && (
                         <span className="text-muted-foreground">
-                          per user/
-                          {isAnnual ? "year" : "month"}
+                          /mo
                         </span>
                       )}
                     </div>
                   </div>
                 </div>
 
-                {plan.name !== "Free" ? (
+                {plan.name !== "Enterprise" ? (
                   <div className="flex items-center gap-2">
                     <Switch
                       checked={isAnnual}
                       onCheckedChange={() => setIsAnnual(!isAnnual)}
                       aria-label="Toggle annual billing"
                     />
-                    <span className="text-sm font-medium">Billed annually</span>
+                    <span className="text-sm font-medium">Billed annually (save 15%)</span>
                   </div>
                 ) : (
                   <span className="text-muted-foreground text-sm">
@@ -121,9 +117,9 @@ export const Pricing = ({ className }: { className?: string }) => {
 
                 <Button
                   className="w-fit"
-                  variant={plan.name === "Startup" ? "default" : "outline"}
+                  variant={plan.name === "Embedded" ? "default" : "outline"}
                 >
-                  Get started
+                  {plan.name === "Enterprise" ? "Contact Sales" : "Get started"}
                 </Button>
               </CardContent>
             </Card>

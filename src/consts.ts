@@ -1,38 +1,33 @@
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
 
-export const SITE_TITLE = "Mainline - Modern Astro Template";
+export const SITE_TITLE = "Nexora - Consulting & Engineering";
 export const SITE_DESCRIPTION =
-  "A modern, fully featured Astro template built with Shadcn/UI, TailwindCSS and TypeScript, perfect for your next web application.";
+  "Nexora helps startups and enterprises ship faster with elite consulting and engineering teams. Strategy, architecture, and execution — end to end.";
 
-export const GITHUB_URL =
-  "https://github.com/shadcnblocks/mainline-astro-template";
+export const GITHUB_URL = "https://github.com";
 
 export const SITE_METADATA = {
   title: {
-    default: "Mainline - Modern Astro Template",
-    template: "%s | Mainline",
+    default: "Nexora - Consulting & Engineering",
+    template: "%s | Nexora",
   },
   description:
-    "A modern Astro template built with shadcn/ui, Tailwind & MDX. Open source - MIT License.",
+    "Nexora helps startups and enterprises ship faster with elite consulting and engineering teams. Strategy, architecture, and execution — end to end.",
   keywords: [
-    "Astro",
-    "astro template",
-    "astro theme",
-    "astro starter",
-    "shadcn template",
-    "shadcn theme",
-    "shadcn starter",
-    "tailwind template",
-    "tailwind theme",
-    "tailwind starter",
-    "mdx template",
-    "mdx theme",
-    "mdx starter",
+    "consulting",
+    "engineering",
+    "software development",
+    "tech consulting",
+    "startup engineering",
+    "product strategy",
+    "software architecture",
+    "dev team augmentation",
+    "Nexora",
   ],
-  authors: [{ name: "shadcnblocks.com" }],
-  creator: "shadcnblocks.com",
-  publisher: "shadcnblocks.com",
+  authors: [{ name: "Nexora" }],
+  creator: "Nexora",
+  publisher: "Nexora",
   robots: {
     index: true,
     follow: true,
@@ -49,25 +44,25 @@ export const SITE_METADATA = {
     shortcut: [{ url: "/favicon/favicon.ico" }],
   },
   openGraph: {
-    title: "Mainline - Modern Astro Template",
+    title: "Nexora - Consulting & Engineering",
     description:
-      "A modern Astro template built with shadcn/ui, Tailwind & MDX. Open source - MIT License.",
-    siteName: "Mainline",
+      "Nexora helps startups and enterprises ship faster with elite consulting and engineering teams. Strategy, architecture, and execution — end to end.",
+    siteName: "Nexora",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Mainline - Modern Astro Template",
+        alt: "Nexora - Consulting & Engineering",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mainline - Modern Astro Template",
+    title: "Nexora - Consulting & Engineering",
     description:
-      "A modern Astro template built with shadcn/ui, Tailwind & MDX. Open source - MIT License.",
+      "Nexora helps startups and enterprises ship faster with elite consulting and engineering teams. Strategy, architecture, and execution — end to end.",
     images: ["/og-image.jpg"],
-    creator: "@ausrobdev",
+    creator: "@nexora",
   },
 };

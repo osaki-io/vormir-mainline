@@ -4,13 +4,13 @@ import { cn } from "@/lib/utils";
 
 const topItems = [
   {
-    title: "Reusable issue templates.",
+    title: "Discovery & Roadmapping.",
     description:
-      "Draft lightning-fast documents with our Smart Instructions and Templates.",
+      "We audit your codebase, team, and product goals to build a clear execution plan.",
     images: [
       {
         src: "/resource-allocation/templates.webp",
-        alt: "Issue template interface",
+        alt: "Discovery interface",
         width: 495,
         height: 186,
       },
@@ -20,8 +20,8 @@ const topItems = [
     fade: [""],
   },
   {
-    title: "Simplify your stack.",
-    description: "No more Confluence, SharePoint, or Microsoft Word.",
+    title: "Tech stack modernization.",
+    description: "Migrate from legacy systems to modern, scalable architecture.",
     images: [
       { src: "/logos/jira.svg", alt: "Jira logo", width: 48, height: 48 },
       { src: "/logos/excel.svg", alt: "Excel logo", width: 48, height: 48 },
@@ -60,13 +60,13 @@ const topItems = [
 
 const bottomItems = [
   {
-    title: "Graveyard it.",
+    title: "Zero-to-MVP.",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do.",
+      "Ship a production-ready MVP in weeks with senior engineers embedded in your team.",
     images: [
       {
         src: "/resource-allocation/graveyard.webp",
-        alt: "Graveyard interface",
+        alt: "MVP interface",
         width: 305,
         height: 280,
       },
@@ -76,13 +76,13 @@ const bottomItems = [
     fade: ["bottom"],
   },
   {
-    title: "Task discussions.",
+    title: "Team Augmentation.",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.",
+      "Fill gaps in your engineering team with battle-tested senior developers.",
     images: [
       {
         src: "/resource-allocation/discussions.webp",
-        alt: "Task discussions interface",
+        alt: "Team interface",
         width: 320,
         height: 103,
       },
@@ -92,13 +92,13 @@ const bottomItems = [
     fade: [""],
   },
   {
-    title: "Notifications.",
+    title: "Ongoing Support.",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.",
+      "Retainer-based support to keep your systems healthy and your roadmap on track.",
     images: [
       {
         src: "/resource-allocation/notifications.webp",
-        alt: "Notifications interface",
+        alt: "Support interface",
         width: 305,
         height: 280,
       },
@@ -112,12 +112,12 @@ const bottomItems = [
 export const ResourceAllocation = () => {
   return (
     <section
-      id="resource-allocation"
+      id="services"
       className="overflow-hidden pb-28 lg:pb-32"
     >
       <div className="">
         <h2 className="container text-center text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-6xl">
-          Mainline your resource allocation and execution
+          Services that move the needle
         </h2>
 
         <div className="mt-8 md:mt-12 lg:mt-20">

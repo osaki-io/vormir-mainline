@@ -15,59 +15,59 @@ import { cn } from "@/lib/utils";
 
 const items = [
   {
-    quote: "We're misusing Mainline as a CRM and it still works!",
-    author: "Amy Chase",
-    role: "PM",
-    company: "Mercury Finance",
+    quote: "Nexora helped us ship our MVP in 6 weeks. What would have taken 6 months internally.",
+    author: "Sarah Chen",
+    role: "CEO",
+    company: "FleetSync",
     image: "/testimonials/amy-chase.webp",
   },
   {
-    quote: "I was able to replace 80% of my team with Mainline bots.",
-    author: "Jonas Kotara",
-    role: "Lead Engineer",
-    company: "Mercury Finance",
+    quote: "They modernized our legacy stack and cut our infra costs by 40%.",
+    author: "Marcus Webb",
+    role: "CTO",
+    company: "PayRoute",
     image: "/testimonials/jonas-kotara.webp",
   },
   {
-    quote: "Founder Mode is hard enough without having a really nice PM app.",
-    author: "Kevin Yam",
+    quote: "Having a fractional CTO from Nexora changed how we think about product strategy.",
+    author: "Priya Nanda",
     role: "Founder",
-    company: "Mercury Finance",
+    company: "HealthLoop",
     image: "/testimonials/kevin-yam.webp",
   },
   {
-    quote: "I can use the tool as a substitute from my PM.",
-    author: "Kundo Marta",
-    role: "Founder",
-    company: "Mercury Finance",
+    quote: "The team augmentation model let us scale engineering without the hiring headache.",
+    author: "David Okonkwo",
+    role: "VP Engineering",
+    company: "Gridline",
     image: "/testimonials/kundo-marta.webp",
   },
   {
-    quote: "We're misusing Mainline as a CRM and it still works!",
-    author: "Amy Chase",
-    role: "PM",
-    company: "Mercury Finance",
+    quote: "Nexora helped us ship our MVP in 6 weeks. What would have taken 6 months internally.",
+    author: "Sarah Chen",
+    role: "CEO",
+    company: "FleetSync",
     image: "/testimonials/amy-chase.webp",
   },
   {
-    quote: "I was able to replace 80% of my team with Mainline bots.",
-    author: "Jonas Kotara",
-    role: "Lead Engineer",
-    company: "Mercury Finance",
+    quote: "They modernized our legacy stack and cut our infra costs by 40%.",
+    author: "Marcus Webb",
+    role: "CTO",
+    company: "PayRoute",
     image: "/testimonials/jonas-kotara.webp",
   },
   {
-    quote: "Founder Mode is hard enough without having a really nice PM app.",
-    author: "Kevin Yam",
+    quote: "Having a fractional CTO from Nexora changed how we think about product strategy.",
+    author: "Priya Nanda",
     role: "Founder",
-    company: "Mercury Finance",
+    company: "HealthLoop",
     image: "/testimonials/kevin-yam.webp",
   },
   {
-    quote: "I can use the tool as a substitute from my PM.",
-    author: "Kundo Marta",
-    role: "Founder",
-    company: "Mercury Finance",
+    quote: "The team augmentation model let us scale engineering without the hiring headache.",
+    author: "David Okonkwo",
+    role: "VP Engineering",
+    company: "Gridline",
     image: "/testimonials/kundo-marta.webp",
   },
 ];
@@ -85,15 +85,13 @@ export const Testimonials = ({
         <div className="container">
           <div className="space-y-4">
             <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-              Trusted by product builders
+              Trusted by founders & CTOs
             </h2>
             <p className="text-muted-foreground max-w-md leading-snug">
-              Mainline is built on the habits that make the best product teams
-              successful: staying focused, moving quickly, and always aiming for
-              high-quality work.
+              We embed with teams to unblock hard problems, ship faster, and build products users love.
             </p>
             <Button variant="outline" className="shadow-md">
-              Read our Customer Stories <ArrowRight className="size-4" />
+              Read Case Studies <ArrowRight className="size-4" />
             </Button>
           </div>
 
