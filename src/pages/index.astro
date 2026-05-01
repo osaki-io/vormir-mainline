@@ -7,7 +7,7 @@ import { Features } from '@/components/blocks/features';
 import { Hero } from '@/components/blocks/hero';
 import { Logos } from '@/components/blocks/logos';
 
-import { ResourceAllocation } from '@/components/blocks/resource-allocation';
+import { Services } from '@/components/blocks/services';
 import { BlogPreview } from '@/components/blocks/blog-preview';
 import { Testimonials } from '@/components/blocks/testimonials';
 import { WorkPreview } from '@/components/blocks/work-preview';
@@ -22,7 +22,7 @@ import DefaultLayout from '@/layouts/DefaultLayout.astro';
     <Hero />
     <Logos client:only="react"/> 
     <Features />
-    <ResourceAllocation />
+    <Services />
   </Background>
   <WorkPreview />
   <Testimonials client:only='react'/>
