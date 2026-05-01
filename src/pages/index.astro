@@ -8,6 +8,7 @@ import { Hero } from '@/components/blocks/hero';
 import { Logos } from '@/components/blocks/logos';
 
 import { ResourceAllocation } from '@/components/blocks/resource-allocation';
+import { BlogPreview } from '@/components/blocks/blog-preview';
 import { Testimonials } from '@/components/blocks/testimonials';
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
 
@@ -23,6 +24,7 @@ import DefaultLayout from '@/layouts/DefaultLayout.astro';
     <ResourceAllocation />
   </Background>
   <Testimonials client:only='react'/>
+  <BlogPreview />
   <Background variant="bottom">
     <FAQ client:only='react'/>
   </Background>
