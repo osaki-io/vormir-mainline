@@ -81,6 +81,12 @@ export const Testimonials = ({
 }) => {
   return (
     <>
+      <div className="relative flex items-center justify-center">
+        <DashedLine className="text-muted-foreground" />
+        <span className="bg-background text-muted-foreground absolute px-3 font-mono text-sm font-medium tracking-wide max-md:hidden">
+          TRUSTED BY
+        </span>
+      </div>
       <section className={cn("overflow-hidden py-28 lg:py-32", className)}>
         <div className="container">
           <div className="space-y-4">
