@@ -111,5 +111,9 @@ export const WorkPreview = () => {
         </div>
       </div>
     </section>
+    <DashedLine
+      orientation="horizontal"
+      className="mx-auto max-w-[80%]"
+    />
   );
 };
