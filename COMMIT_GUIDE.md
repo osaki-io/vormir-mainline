@@ -20,8 +20,12 @@ git push
 | `chore` | Config, deps, tooling |
 | `remove` | Deleting sections, files, features |
 
-## Rules
+## Ground Rules
 
+- **NO changes without explicit approval** — wait for "ok build it" or similar
+- **Build locally first** — verify with `npm run build` before any commit
+- **One change at a time** — don't batch multiple fixes/features
+- **Store images locally** — once fetched from external APIs, save to `/public/`
 - **One change per commit** — don't batch unrelated changes
 - **Use present tense** — "add hero section" not "added"
 - **No period at end** of subject line
