@@ -150,10 +150,6 @@ export const Testimonials = ({
           </div>
         </div>
       </section>
-      <DashedLine
-        orientation="horizontal"
-        className={cn("mx-auto max-w-[80%]", dashedLineClassName)}
-      />
     </>
   );
 };
