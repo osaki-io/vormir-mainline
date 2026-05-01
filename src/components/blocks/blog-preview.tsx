@@ -27,18 +27,17 @@ const posts = [
 
 export const BlogPreview = () => {
   return (
-    <section className="py-28 lg:py-32">
-      <div className="container">
-        {/* Top dashed line */}
-        <div className="relative flex items-center justify-center">
-          <DashedLine className="text-muted-foreground" />
-          <span className="bg-background text-muted-foreground absolute px-3 font-mono text-sm font-medium tracking-wide max-md:hidden">
-            FROM THE BLOG
-          </span>
-        </div>
-
-        {/* Header */}
-        <div className="mt-10 flex items-end justify-between lg:mt-24">
+    <>
+      <div className="relative flex items-center justify-center">
+        <DashedLine className="text-muted-foreground" />
+        <span className="bg-background text-muted-foreground absolute px-3 font-mono text-sm font-medium tracking-wide max-md:hidden">
+          FROM THE BLOG
+        </span>
+      </div>
+      <section className="pb-28 lg:pb-32">
+        <div className="container">
+          {/* Header */}
+          <div className="mt-10 flex items-end justify-between lg:mt-24">
           <div className="space-y-4">
             <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
               Latest Insights
@@ -90,5 +89,6 @@ export const BlogPreview = () => {
         </div>
       </div>
     </section>
+  </>
   );
 };
