@@ -1,0 +1,23 @@
+---
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+
+import { Background } from '@/components/background';
+import { ShopifyHero } from '@/components/blocks/shopify-hero';
+import { ShopifyServices } from '@/components/blocks/shopify-services';
+import { WhyShopify } from '@/components/blocks/why-shopify';
+import { ShopifyProcess } from '@/components/blocks/shopify-process';
+import { ShopifyCTA } from '@/components/blocks/shopify-cta';
+import DefaultLayout from '@/layouts/DefaultLayout.astro';
+---
+
+<DefaultLayout title={`Shopify Development — ${SITE_TITLE}`} description={SITE_DESCRIPTION}>
+  <Background className="via-muted to-muted/80">
+    <ShopifyHero />
+    <ShopifyServices />
+  </Background>
+  <WhyShopify />
+  <Background variant="bottom">
+    <ShopifyProcess />
+    <ShopifyCTA />
+  </Background>
+</DefaultLayout>
