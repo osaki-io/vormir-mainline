@@ -2,19 +2,29 @@
 
 ## Workflow (Read This First)
 
-**Clone → Compare/Reduce → Update Copy**
+**Clone → Compare/Reduce → Update Copy → Show User → Commit**
 
 When creating a new service page, follow this exact order:
 
 1. **Clone the reference page** (`webflow.astro`) — copy all 5 component files with new names
-2. **Compare & reduce** — look at the cloned components vs. what the new service actually needs. Remove sections the new page doesn't have (e.g., no FAQ, no "Our Work", no "With Every Build" prose). Keep layout, spacing, and structure identical to the reference.
+2. **Compare & reduce** — remove sections the new page doesn't need (FAQ, "Our Work", prose intros). Keep layout, spacing, and structure **identical** to the reference.
 3. **Build and verify** — the page compiles and renders with placeholder copy
-4. **Update copy** — swap in real headings, descriptions, icons, and labels from the content doc
-5. **Build again** — final verification
+4. **Run the Clone Verification Checklist** (below) — check every layout detail matches webflow
+5. **Update copy** — swap in real headings, descriptions, icons, and labels from the content doc
+6. **Build again** — verify nothing broke
+7. **Show the user** — do NOT commit until user reviews and approves
+8. **Commit** — only after approval
 
-### Common Mistake
+### Common Mistakes
 
-Skipping step 2 and copying everything blindly — including sections the new service page doesn't need. Or worse: redesigning components during step 1 instead of cloning the structure faithfully. Clone the layout first, then decide what to remove, then write copy.
+| Mistake | What Happens | Prevention |
+|---|---|---|
+| **Redesigning during clone** | Cards stack vertically instead of horizontal icon+title row | Copy HTML structure exactly, don't improvise |
+| **Wrong card grid** | 5 cards in 2-col grid leave empty slot on last row | Last card MUST have `lg:col-span-2` |
+| **Adding hover effects** | `hover:shadow-lg` or `transition-all` on cards | Webflow cards have NO hover effects. Remove them |
+| **Long benefit descriptions** | Grid cards get tall and dense, breaks visual rhythm | Max 7-10 words per benefit description |
+| **Long process descriptions** | Steps look crammed in 5-col grid | Max 8-10 words per step description |
+| **Committing without review** | User finds layout bugs after commit | Build → show user → wait for approval → commit |
 
 ---
 
@@ -137,7 +147,7 @@ Based on `/services/webflow` — here's exactly what content you need for each s
 |---|---|---|
 | Cards | 4-5 | — |
 | Card title | — | 2-4 words |
-| Card description | — | 1 short sentence (8-12 words) |
+| Card description | — | **6-10 words max** (fits 2 lines on mobile) |
 | Card link | — | href to sub-page or # |
 
 **Example cards:**
@@ -159,7 +169,7 @@ Based on `/services/webflow` — here's exactly what content you need for each s
 ```
 
 **Rules:**
-- Descriptions must fit in 2 lines on mobile
+- **Descriptions: 6-10 words max** (long descriptions make cards tall and break grid alignment)
 - Last card spans full width if odd number (5 cards → 2+2+1)
 - Each card needs a unique icon from `lucide-react`
 - Links can be `#` if sub-pages don't exist yet
@@ -197,8 +207,8 @@ Based on `/services/webflow` — here's exactly what content you need for each s
 
 **Rules:**
 - Benefits answer "why this platform?" not "what features?"
-- Each description is ONE line, max 10 words
-- Use periods for sentence fragments, no periods for phrases
+- **Each description: 5-8 words max** (not 15+. Long descriptions make cards tall and dense)
+- Use sentence fragments with periods (not full sentences)
 - Mix technical and business benefits (3+3)
 
 ---
@@ -210,7 +220,7 @@ Based on `/services/webflow` — here's exactly what content you need for each s
 | Dashed line label | — | 2 words uppercase ("OUR PROCESS") |
 | H2 | — | 3-4 words ("How We Work") |
 | Subheading | — | 1 sentence |
-| Steps | 5 | Number + 1 word title + 1 line description |
+| Steps | 5 | Number + 1 word title + **max 8 words description** |
 
 **Example steps:**
 ```
@@ -336,6 +346,45 @@ import DefaultLayout from '@/layouts/DefaultLayout.astro';
 
 ---
 
+## Clone Verification Checklist
+
+Run this BEFORE updating copy. The cloned page must match webflow exactly in structure:
+
+### Service Cards Section (`{service}-services.tsx`)
+- [ ] Grid uses `grid-cols-1` then `lg:grid-cols-2` (not `sm:grid-cols-2`)
+- [ ] Last card (5th) has `lg:col-span-2` class
+- [ ] Card has NO `hover:shadow-lg`, NO `transition-all`, NO `group` on Card
+- [ ] Icon + title are side-by-side in a flex row (`flex items-center gap-4`)
+- [ ] Title size is `text-xl md:text-2xl` (not `text-lg md:text-xl`)
+- [ ] Description has NO explicit top margin (uses flex gap from parent)
+- [ ] Link uses `group` class with `group-hover:translate-x-1` (not `group/link`)
+- [ ] Section has header with "What We Do" H2 + subheading
+
+### Why Section (`why-{service}.tsx`)
+- [ ] 6 benefit items (not 5)
+- [ ] Each description is ONE line, max 10 words
+- [ ] Descriptions use sentence fragments with periods (not full sentences)
+- [ ] Layout: icon (left) + title + description (right) in flex row
+
+### Process Steps Section (`{service}-process.tsx` or `how-we-work.tsx`)
+- [ ] 5 steps exactly
+- [ ] Step title is 1 word (Discovery, Design, Build, Launch, Manage)
+- [ ] Each description max 10 words
+- [ ] 5-column grid on desktop (`lg:grid-cols-5`)
+
+### Hero Section (`{service}-hero.tsx`)
+- [ ] 2-column layout: content left, badge card right
+- [ ] Badge card uses `rounded-2xl border p-6` with icon + text
+- [ ] Breadcrumb: `Services > Service Name`
+- [ ] Two buttons: primary + outline with arrow icon
+
+### CTA Section (`{service}-cta.tsx` or `lets-talk.tsx`)
+- [ ] Centered layout with dashed line label
+- [ ] H2 asks service-specific question
+- [ ] Two buttons: "Contact us" (primary) + "Explore our work" (outline)
+
+---
+
 ## Content Checklist
 
 Before shipping a new service page:
@@ -360,3 +409,41 @@ Before shipping a new service page:
 - The CTA section can stay identical across services — just change the H2
 - If a service has fewer/more offerings, adjust card grid (2-col vs spanning)
 - Always test mobile — gradient sections can hide text if colors mismatch
+
+---
+
+## Lessons Learned (Real Mistakes)
+
+### HubSpot Clone Issues
+
+**What went wrong:**
+1. Service cards stacked vertically (icon above title) instead of horizontal row
+2. Missing `lg:col-span-2` on last card — left empty grid slot
+3. Added `hover:shadow-lg` and `transition-all` — webflow has NO hover effects
+4. Used `group/link` variant — webflow uses standard `group`
+5. Title sizes wrong: `text-lg md:text-xl` instead of `text-xl md:text-2xl`
+
+**Root cause:** Changed HTML structure while cloning instead of copying exactly.
+
+**Fix:** Rewrote cards to match webflow's horizontal icon+title layout, removed effects, fixed grid spanning.
+
+### Shopify Clone Issues
+
+**What went wrong:**
+1. Same card layout issues as HubSpot (vertical stack, missing col-span)
+2. Process step descriptions too long — "We learn your products, customers, and sales flow. Audit the current store if there is one. Scope what needs to be built." (22 words)
+3. Why section descriptions too long — "Inventory, payments, shipping, returns — Shopify handles the complexity so you can focus on products and customers." (14 words)
+
+**Root cause:** Wrote full sentences instead of punchy fragments.
+
+**Fix:** Tightened to 5-8 words per description. "Learn your products and audit what exists." (7 words)
+
+### Copy Length Rule
+
+| Section | Bad (words) | Good (words) |
+|---|---|---|
+| Card descriptions | 15-22 | 6-10 |
+| Benefit descriptions | 13-17 | 5-8 |
+| Process descriptions | 12-22 | 6-10 |
+
+**If descriptions are too long, the grid breaks visually. Keep it punchy.**
