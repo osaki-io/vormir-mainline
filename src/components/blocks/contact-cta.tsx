@@ -18,7 +18,7 @@ export function ContactCTA() {
           </span>
         </div>
 
-        <div className="mt-10 grid gap-14 lg:mt-24 lg:grid-cols-2 lg:gap-24">
+        <div className="mt-6 grid gap-14 lg:mt-12 lg:grid-cols-2 lg:gap-24">
           {/* Left — pitch + CTAs */}
           <div className="flex flex-col justify-center space-y-8">
             <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
