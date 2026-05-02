@@ -11,10 +11,7 @@ import { Services } from '@/components/blocks/services';
 import { BlogPreview } from '@/components/blocks/blog-preview';
 import { Testimonials } from '@/components/blocks/testimonials';
 import { TechStack } from '@/components/blocks/tech-stack';
-import { WorkPreview } from '@/components/blocks/work-preview';
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
-
-
 
 ---
 
@@ -22,12 +19,11 @@ import DefaultLayout from '@/layouts/DefaultLayout.astro';
   <Background className="via-muted to-muted/80">
     <Hero />
     <Logos client:only="react"/> 
-    <Features />
     <Services />
+    <Features />
   </Background>
-  <TechStack client:only="react"/>
-  <WorkPreview />
   <Testimonials client:only='react'/>
+  <TechStack client:only="react"/>
   <BlogPreview />
   <Background variant="bottom">
     <ContactCTA client:load />
