@@ -14,7 +14,7 @@ export const ProcessSteps = () => {
       <div className="container">
         <div className="relative flex items-center justify-center">
           <DashedLine className="text-muted-foreground" />
-          <span className="bg-muted text-muted-foreground absolute px-3 font-mono text-sm font-medium tracking-wide max-md:hidden">
+          <span className="bg-background text-muted-foreground absolute px-3 font-mono text-sm font-medium tracking-wide">
             OUR PROCESS
           </span>
         </div>
@@ -28,7 +28,7 @@ export const ProcessSteps = () => {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-10 sm:grid-cols-2 lg:mt-20 lg:grid-cols-5 lg:gap-6">
+        <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:mt-20 lg:grid-cols-5 lg:gap-6">
           {steps.map((step) => (
             <div key={step.number} className="text-center">
               <div className="font-mono text-3xl font-bold tracking-tight text-muted-foreground/40">

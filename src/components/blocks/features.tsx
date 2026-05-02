@@ -26,14 +26,14 @@ const items = [
   },
 ];
 
-export const Features = () => {
+export const Features = ({ labelBg = "muted" }: { labelBg?: "muted" | "background" }) => {
   return (
     <section id="feature-modern-teams" className="pb-28 lg:pb-32">
       <div className="container">
         {/* Top dashed line with text */}
         <div className="relative flex items-center justify-center">
           <DashedLine className="text-muted-foreground" />
-          <span className="bg-muted text-muted-foreground absolute px-3 font-mono text-sm font-medium tracking-wide max-md:hidden">
+          <span className={`${labelBg === "background" ? "bg-background" : "bg-muted"} text-muted-foreground absolute px-3 font-mono text-sm font-medium tracking-wide`}>
             STRATEGY. BUILD. SCALE.
           </span>
         </div>

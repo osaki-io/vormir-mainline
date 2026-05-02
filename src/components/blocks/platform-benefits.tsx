@@ -37,22 +37,22 @@ const benefits = [
 
 export const PlatformBenefits = () => {
   return (
-    <section className="py-28 lg:py-32">
+    <section className="bg-background py-16 text-foreground md:py-24 lg:py-32">
       <div className="container">
         <div className="relative flex items-center justify-center">
           <DashedLine className="text-muted-foreground" />
-          <span className="bg-background text-muted-foreground absolute px-3 font-mono text-sm font-medium tracking-wide max-md:hidden">
+          <span className="bg-background text-muted-foreground absolute px-3 font-mono text-sm font-medium tracking-wide">
             WHY WEBFLOW
           </span>
         </div>
 
         <div className="mx-auto mt-10 max-w-4xl text-center lg:mt-24">
-          <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-            The right platform for teams that move fast.
+          <h2 className="text-2xl tracking-tight text-foreground md:text-4xl lg:text-5xl">
+            Webflow is the right platform for teams that move fast.
           </h2>
         </div>
 
-        <div className="mt-12 grid gap-x-12 gap-y-10 sm:grid-cols-2 md:mt-16 lg:mt-24 lg:grid-cols-3 lg:gap-x-16 lg:gap-y-12">
+        <div className="mt-12 grid gap-8 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-10 md:mt-16 lg:mt-24 lg:grid-cols-3 lg:gap-x-16 lg:gap-y-12">
           {benefits.map((benefit) => {
             const Icon = benefit.icon;
             return (
@@ -61,7 +61,7 @@ export const PlatformBenefits = () => {
                   <Icon className="text-primary size-5" />
                 </div>
                 <div className="pt-0.5">
-                  <h3 className="font-display text-base font-bold tracking-tight md:text-lg">
+                  <h3 className="font-display text-base font-bold tracking-tight text-foreground md:text-lg">
                     {benefit.title}
                   </h3>
                   <p className="text-muted-foreground mt-1 text-sm leading-relaxed md:text-base">

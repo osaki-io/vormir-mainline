@@ -24,7 +24,7 @@ export const TechStack = () => {
         {/* Dashed line + label */}
         <div className="relative flex items-center justify-center">
           <DashedLine className="text-muted-foreground" />
-          <span className="bg-background text-muted-foreground absolute px-3 font-mono text-sm font-medium tracking-wide max-md:hidden">
+          <span className="bg-background text-muted-foreground absolute px-3 font-mono text-sm font-medium tracking-wide">
             TOOLS WE USE
           </span>
         </div>
