@@ -12,9 +12,9 @@ const contactInfo = [
     title: "Corporate office",
     content: (
       <p className="text-muted-foreground mt-3">
-        1 Carlsberg Close
+        Magarpatta, Hadapsar
         <br />
-        1260 Hillview, Australia
+        Pune, MH - India
       </p>
     ),
   },
@@ -23,21 +23,21 @@ const contactInfo = [
     content: (
       <div className="mt-3">
         <div>
-          <p className="">Careers</p>
+          <p className="">Sales</p>
           <a
-            href="mailto:careers@streamline.com"
+            href="mailto:sales@vormir.co"
             className="text-muted-foreground hover:text-foreground"
           >
-            careers@streamline.com
+            sales@vormir.co
           </a>
         </div>
         <div className="mt-1">
-          <p className="">Press</p>
+          <p className="">Careers</p>
           <a
-            href="mailto:press@streamline.com"
+            href="mailto:careers@vormir.co"
             className="text-muted-foreground hover:text-foreground"
           >
-            press@streamline.com
+            careers@vormir.co
           </a>
         </div>
       </div>
@@ -87,38 +87,95 @@ export const Contact = () => {
         <div className="mx-auto">
           <h2 className="text-lg font-semibold">Inquiries</h2>
           <form className="mt-8 space-y-5">
-            <div className="space-y-2">
-              <Label>Full name</Label>
-              <Input placeholder="First and last name" />
+            {/* Name + Email */}
+            <div className="grid gap-5 sm:grid-cols-2">
+              <div className="space-y-2">
+                <Label htmlFor="contact-name">Name</Label>
+                <Input
+                  id="contact-name"
+                  type="text"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="contact-email">Email</Label>
+                <Input
+                  id="contact-email"
+                  type="email"
+                  placeholder="you@company.com"
+                  required
+                />
+              </div>
             </div>
-            <div className="space-y-2">
-              <Label>Work email address</Label>
-              <Input placeholder="me@company.com" type="email" />
+
+            {/* Service + Timeline */}
+            <div className="grid gap-5 sm:grid-cols-2">
+              <div className="space-y-2">
+                <Label htmlFor="contact-service">Service</Label>
+                <select
+                  id="contact-service"
+                  required
+                  className="border-input placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:bg-input/30 flex h-9 w-full rounded-md border bg-transparent px-3 py-1 text-sm shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50"
+                >
+                  <option value="" disabled selected>
+                    Select a service
+                  </option>
+                  <option value="webflow">Webflow Development</option>
+                  <option value="hubspot">HubSpot Implementation</option>
+                  <option value="wix">Wix Studio Development</option>
+                  <option value="shopify">Shopify Development</option>
+                  <option value="development">Full-Stack Development</option>
+                  <option value="gtm">Go-to-Market Services</option>
+                </select>
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="contact-timeline">Timeline</Label>
+                <select
+                  id="contact-timeline"
+                  required
+                  className="border-input placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:bg-input/30 flex h-9 w-full rounded-md border bg-transparent px-3 py-1 text-sm shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50"
+                >
+                  <option value="" disabled selected>
+                    When do you need it?
+                  </option>
+                  <option value="asap">ASAP</option>
+                  <option value="1-3-months">1 – 3 months</option>
+                  <option value="3-6-months">3 – 6 months</option>
+                </select>
+              </div>
             </div>
+
+            {/* Budget */}
             <div className="space-y-2">
-              <Label>
-                Company name{" "}
-                <span className="text-muted-foreground">(optional)</span>
-              </Label>
-              <Input placeholder="Company name" />
+              <Label htmlFor="contact-budget">Budget (USD)</Label>
+              <select
+                id="contact-budget"
+                required
+                className="border-input placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:bg-input/30 flex h-9 w-full rounded-md border bg-transparent px-3 py-1 text-sm shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50"
+              >
+                <option value="" disabled selected>
+                  Select a budget range
+                </option>
+                <option value="0-2k">$0 – $2,000</option>
+                <option value="2k-5k">$2,000 – $5,000</option>
+                <option value="5k-plus">$5,000+</option>
+              </select>
             </div>
+
+            {/* Message */}
             <div className="space-y-2">
-              <Label>
-                Number of employees{" "}
-                <span className="text-muted-foreground">(optional)</span>
-              </Label>
-              <Input placeholder="e.g. 10-50" />
-            </div>
-            <div className="space-y-2">
-              <Label>Your message</Label>
+              <Label htmlFor="contact-message">Message</Label>
               <Textarea
-                placeholder="Write your message"
-                className="min-h-[120px] resize-none"
+                id="contact-message"
+                placeholder="Tell us about your project..."
+                rows={4}
+                required
               />
             </div>
 
             <div className="flex justify-end">
-              <Button size="lg" type="submit" className="">
+              <Button size="lg" type="submit">
                 Submit
               </Button>
             </div>
