@@ -1,0 +1,23 @@
+---
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+
+import { Background } from '@/components/background';
+import { FullstackHero } from '@/components/blocks/fullstack-hero';
+import { FullstackServices } from '@/components/blocks/fullstack-services';
+import { WhyFullstack } from '@/components/blocks/why-fullstack';
+import { FullstackProcess } from '@/components/blocks/fullstack-process';
+import { FullstackCTA } from '@/components/blocks/fullstack-cta';
+import DefaultLayout from '@/layouts/DefaultLayout.astro';
+---
+
+<DefaultLayout title={`Full-Stack Development — ${SITE_TITLE}`} description={SITE_DESCRIPTION}>
+  <Background className="via-muted to-muted/80">
+    <FullstackHero />
+    <FullstackServices />
+  </Background>
+  <WhyFullstack />
+  <Background variant="bottom">
+    <FullstackProcess />
+    <FullstackCTA />
+  </Background>
+</DefaultLayout>
