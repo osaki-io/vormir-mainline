@@ -40,10 +40,10 @@ export const BlogPreview = () => {
           <div className="mt-10 flex items-end justify-between lg:mt-24">
           <div className="space-y-4">
             <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-              Latest Insights
+              Latest thinking.
             </h2>
             <p className="text-muted-foreground max-w-md leading-snug">
-              Thoughts on engineering strategy, team building, and shipping fast.
+              Notes on engineering, strategy, and building products that last.
             </p>
           </div>
           <a

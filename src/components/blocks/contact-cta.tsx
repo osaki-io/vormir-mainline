@@ -22,19 +22,18 @@ export function ContactCTA() {
           {/* Left — pitch + CTAs */}
           <div className="flex flex-col justify-center space-y-8">
             <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-              Let's build something that lasts
+              Have a project in mind?
             </h2>
             <div className="text-muted-foreground max-w-md space-y-4 leading-snug">
               <p>
-                Every project starts with a conversation. We'll dig into your
-                goals, audit your current setup, and map out a path from
-                discovery to delivery — clear timelines, honest budgets, and no
-                surprises.
+                Book a 30-minute call to talk through what you're building. Or
+                send us a project brief and we'll come back with a plan.
               </p>
               <p>
-                Whether you need a landing page this week or a full product
-                rebuild over the next quarter, we'll tell you exactly where we
-                can help and how fast we can move.
+                No obligation. Just an honest look at what you need and how we can help.
+              </p>
+              <p>
+                Most proposals go out within 24 hours.
               </p>
             </div>
             <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center">

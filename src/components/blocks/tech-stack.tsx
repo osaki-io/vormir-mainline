@@ -31,10 +31,10 @@ export const TechStack = () => {
 
         <div className="mt-10 space-y-4 lg:mt-24">
           <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-            The right stack for every project
+            What we build with.
           </h2>
           <p className="text-muted-foreground max-w-md leading-snug">
-            We work with the tools your team already knows — and the ones that get you to market faster.
+            The tools and platforms we use to ship fast and scale.
           </p>
         </div>
 
