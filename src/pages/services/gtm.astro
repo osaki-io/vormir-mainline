@@ -1,0 +1,23 @@
+---
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+
+import { Background } from '@/components/background';
+import { GtmHero } from '@/components/blocks/gtm-hero';
+import { GtmServices } from '@/components/blocks/gtm-services';
+import { WhyGtm } from '@/components/blocks/why-gtm';
+import { GtmProcess } from '@/components/blocks/gtm-process';
+import { GtmCTA } from '@/components/blocks/gtm-cta';
+import DefaultLayout from '@/layouts/DefaultLayout.astro';
+---
+
+<DefaultLayout title={`Go-to-Market Services — ${SITE_TITLE}`} description={SITE_DESCRIPTION}>
+  <Background className="via-muted to-muted/80">
+    <GtmHero />
+    <GtmServices />
+  </Background>
+  <WhyGtm />
+  <Background variant="bottom">
+    <GtmProcess />
+    <GtmCTA />
+  </Background>
+</DefaultLayout>
