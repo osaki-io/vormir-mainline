@@ -5,32 +5,32 @@ import { DashedLine } from "@/components/dashed-line";
 const benefits = [
   {
     title: "Purpose-built for e-commerce",
-    line: "Inventory, payments, shipping, returns — Shopify handles the complexity so you can focus on products and customers.",
+    line: "Inventory, payments, shipping — all included.",
     icon: ShoppingCart,
   },
   {
     title: "Checkout that converts",
-    line: "One of the highest-converting checkouts in e-commerce. Fast, trusted, and endlessly customizable.",
+    line: "Fast, trusted, and endlessly customizable.",
     icon: Zap,
   },
   {
     title: "App ecosystem",
-    line: "Thousands of apps in the marketplace, plus custom app development. Whatever your store needs, there is a way to build it.",
+    line: "Thousands of apps. Custom apps when needed.",
     icon: Puzzle,
   },
   {
     title: "Scales with you",
-    line: "From your first hundred orders to your first hundred thousand. Same platform, more power as you grow.",
+    line: "100 orders or 100,000. Same platform.",
     icon: Scaling,
   },
   {
     title: "Headless-ready",
-    line: "Hydrogen and Oxygen give you full front-end control with Shopify's back-end reliability.",
+    line: "Custom front-end with Shopify's back-end.",
     icon: Cpu,
   },
   {
     title: "Secure & compliant",
-    line: "PCI compliance, fraud protection, and automatic security updates built in from day one.",
+    line: "PCI compliance and fraud protection built in.",
     icon: Shield,
   },
 ];

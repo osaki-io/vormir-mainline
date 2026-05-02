@@ -1,11 +1,11 @@
 import { DashedLine } from "@/components/dashed-line";
 
 const steps = [
-  { number: "01", title: "Discovery", line: "We learn your products, customers, and sales flow. Audit the current store if there is one. Scope what needs to be built." },
-  { number: "02", title: "Design", line: "Wireframes and visual design for key pages — homepage, product, collection, cart, checkout." },
-  { number: "03", title: "Build", line: "Theme development or headless build. CMS setup, integrations, checkout customization, responsive testing." },
-  { number: "04", title: "Launch", line: "QA across browsers and devices. Analytics and tracking verified. Products loaded, payment tested." },
-  { number: "05", title: "Manage", line: "Post-launch management if you need it. Product updates, performance monitoring, new features." },
+  { number: "01", title: "Discovery", line: "Learn your products and audit what exists." },
+  { number: "02", title: "Design", line: "Wireframes and visuals before any code is written." },
+  { number: "03", title: "Build", line: "Theme or headless build. Weekly updates." },
+  { number: "04", title: "Launch", line: "QA, analytics, payments verified. Go live." },
+  { number: "05", title: "Manage", line: "Ongoing support or handoff with training." },
 ];
 
 export const ShopifyProcess = () => {

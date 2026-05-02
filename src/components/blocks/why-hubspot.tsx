@@ -5,32 +5,32 @@ import { DashedLine } from "@/components/dashed-line";
 const benefits = [
   {
     title: "Single source of truth",
-    line: "Marketing, sales, and service data in one place. No more spreadsheets or conflicting numbers.",
+    line: "One database for marketing, sales, and service.",
     icon: Database,
   },
   {
     title: "Automation built in",
-    line: "Workflows, sequences, and AI agents that handle the repetitive work. Your team focuses on revenue, not data entry.",
+    line: "Workflows and sequences that run themselves.",
     icon: Zap,
   },
   {
     title: "AI-powered",
-    line: "Lead scoring, predictive analytics, conversational agents, automated workflows — built into the platform, ready to activate.",
+    line: "Lead scoring and chatbots. Ready to activate.",
     icon: Brain,
   },
   {
     title: "Scales with your team",
-    line: "From a 3-person startup to a 200-person company. Same platform, more power as you grow.",
+    line: "3 people or 200. Same platform, more power.",
     icon: Scaling,
   },
   {
     title: "Ecosystem of integrations",
-    line: "Thousands of apps in the marketplace, plus custom APIs. HubSpot connects to whatever your stack requires.",
+    line: "Thousands of apps. Custom APIs when needed.",
     icon: Puzzle,
   },
   {
     title: "Free to start",
-    line: "Core CRM is free. Grow into paid hubs when you need them. No upfront commitment.",
+    line: "Core CRM is free. Pay only when you grow.",
     icon: CheckCircle,
   },
 ];

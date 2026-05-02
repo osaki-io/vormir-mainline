@@ -1,11 +1,11 @@
 import { DashedLine } from "@/components/dashed-line";
 
 const steps = [
-  { number: "01", title: "Discovery", line: "We audit your current setup — tools, data, processes, team adoption. Then map out what needs to change." },
-  { number: "02", title: "Architecture", line: "CRM data model, pipeline design, lifecycle stages, property structure. We plan before we build." },
-  { number: "03", title: "Build & Configure", line: "Implementation, migration, workflow creation, automation setup, integrations. Weekly progress updates." },
-  { number: "04", title: "Train & Launch", line: "Team training sessions, documentation, and a controlled launch. Your team knows the system before we hand it over." },
-  { number: "05", title: "Manage & Optimize", line: "Post-launch support and ongoing management. Workflow optimization, new feature rollouts, campaign support." },
+  { number: "01", title: "Discovery", line: "Audit your setup and map what needs to change." },
+  { number: "02", title: "Architecture", line: "Plan the CRM before we build it." },
+  { number: "03", title: "Build & Configure", line: "Implementation, migration, workflows. Weekly updates." },
+  { number: "04", title: "Train & Launch", line: "Team training, documentation, then go live." },
+  { number: "05", title: "Manage & Optimize", line: "Ongoing support and workflow optimization." },
 ];
 
 export const HubspotProcess = () => {
