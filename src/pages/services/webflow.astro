@@ -1,0 +1,27 @@
+---
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+
+import { Background } from '@/components/background';
+import { ServiceHero } from '@/components/blocks/service-hero';
+import { ServiceCards } from '@/components/blocks/service-cards';
+import { ServiceIncludes } from '@/components/blocks/service-includes';
+import { PlatformBenefits } from '@/components/blocks/platform-benefits';
+import { ProcessSteps } from '@/components/blocks/process-steps';
+import { Features } from '@/components/blocks/features';
+import { ServiceCTA } from '@/components/blocks/service-cta';
+import DefaultLayout from '@/layouts/DefaultLayout.astro';
+---
+
+<DefaultLayout title={`Webflow Development — ${SITE_TITLE}`} description={SITE_DESCRIPTION}>
+  <Background className="via-muted to-muted/80">
+    <ServiceHero />
+    <ServiceCards />
+    <ServiceIncludes />
+  </Background>
+  <PlatformBenefits />
+  <Background variant="bottom">
+    <ProcessSteps />
+    <Features />
+    <ServiceCTA />
+  </Background>
+</DefaultLayout>
