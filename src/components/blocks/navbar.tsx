@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import { ChevronRight, Github } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
@@ -12,7 +12,6 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import { GITHUB_URL } from "@/consts";
 import { cn } from "@/lib/utils";
 
 const ITEMS = [
@@ -117,17 +116,10 @@ export const Navbar = () => {
         {/* Auth Buttons */}
         <div className="flex items-center gap-2.5">
           <ThemeToggle />
-          <a href="/login" className="max-lg:hidden">
+          <a href="/contact" className="max-lg:hidden">
             <Button variant="outline">
-              <span className="relative z-10">Login</span>
+              <span className="relative z-10">Contact us</span>
             </Button>
-          </a>
-          <a
-            href={GITHUB_URL}
-            className="text-muted-foreground hover:text-foreground transition-colors"
-          >
-            <Github className="size-4" />
-            <span className="sr-only">GitHub</span>
           </a>
 
           {/* Hamburger Menu Button (Mobile Only) */}
