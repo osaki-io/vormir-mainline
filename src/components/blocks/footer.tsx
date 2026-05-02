@@ -5,7 +5,7 @@ const serviceLinks = [
   { name: "HubSpot Implementation", href: "/services/hubspot" },
   { name: "Wix Studio Development", href: "/services/wix" },
   { name: "Shopify Development", href: "/services/shopify" },
-  { name: "Full-Stack Development", href: "/services/development" },
+  { name: "Full-Stack Development", href: "/services/fullstack" },
   { name: "Go-to-Market Services", href: "/services/gtm" },
 ];
 

@@ -36,7 +36,7 @@ const serviceItems = [
   },
   {
     title: "Full-Stack Development",
-    href: "/services/development",
+    href: "/services/fullstack",
     description: "Custom applications, APIs, and integrations.",
   },
   {
