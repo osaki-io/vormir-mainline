@@ -10,6 +10,7 @@ import { Logos } from '@/components/blocks/logos';
 import { Services } from '@/components/blocks/services';
 import { BlogPreview } from '@/components/blocks/blog-preview';
 import { Testimonials } from '@/components/blocks/testimonials';
+import { TechStack } from '@/components/blocks/tech-stack';
 import { WorkPreview } from '@/components/blocks/work-preview';
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
 
@@ -24,6 +25,7 @@ import DefaultLayout from '@/layouts/DefaultLayout.astro';
     <Features />
     <Services />
   </Background>
+  <TechStack client:only="react"/>
   <WorkPreview />
   <Testimonials client:only='react'/>
   <BlogPreview />

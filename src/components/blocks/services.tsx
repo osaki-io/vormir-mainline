@@ -1,11 +1,6 @@
 import {
-  ChevronRight,
+  ArrowRight,
   Code2,
-  Globe,
-  Layout,
-  Palette,
-  Settings,
-  ShoppingBag,
   TrendingUp,
 } from "lucide-react";
 
@@ -13,51 +8,86 @@ import { DashedLine } from "@/components/dashed-line";
 
 import { Card, CardContent } from "@/components/ui/card";
 
-const serviceImages = [
-  "/about/1.webp",
-  "/about/2.webp",
-  "/about/3.webp",
-  "/about/4.webp",
-  "/about/1.webp",
-  "/about/2.webp",
-];
+const token = "pk_fHoTZqZxS7mZv8WW-Iw2aw";
 
 const services = [
   {
     title: "Webflow\nDevelopment",
+    description:
+      "Custom websites built for speed, search visibility, and conversion. Landing pages, marketing sites, full rebuilds.",
     href: "/services/webflow",
-    icon: Globe,
-    image: serviceImages[0],
+    logo: `https://img.logo.dev/webflow.com?token=${token}&format=png`,
+    items: [
+      { label: "Website design & development", href: "/services/webflow/design" },
+      { label: "CMS & dynamic content", href: "/services/webflow/cms" },
+      { label: "SEO & performance optimization", href: "/services/webflow/seo" },
+      { label: "Migration to Webflow", href: "/services/webflow/migration" },
+    ],
   },
   {
     title: "HubSpot\nImplementation",
+    description:
+      "CRM, sales, and marketing automation configured to how your team actually works. Implementations, migrations, and ongoing management.",
     href: "/services/hubspot",
-    icon: Settings,
-    image: serviceImages[1],
+    logo: `https://img.logo.dev/hubspot.com?token=${token}&format=png`,
+    items: [
+      { label: "CRM setup & migration", href: "/services/hubspot/crm" },
+      { label: "Marketing automation", href: "/services/hubspot/marketing" },
+      { label: "Sales pipeline configuration", href: "/services/hubspot/sales" },
+      { label: "Reporting & dashboards", href: "/services/hubspot/reporting" },
+    ],
   },
   {
     title: "Wix Studio\nDevelopment",
+    description:
+      "Flexible, scalable builds on Wix Studio. Business sites, portfolios, and storefronts — fast to launch, easy to manage.",
     href: "/services/wix",
-    icon: Palette,
-    image: serviceImages[2],
+    logo: `https://img.logo.dev/wix.com?token=${token}&format=png`,
+    items: [
+      { label: "Website design & development", href: "/services/wix/design" },
+      { label: "Business & portfolio builds", href: "/services/wix/portfolio" },
+      { label: "E-commerce setup", href: "/services/wix/ecommerce" },
+      { label: "Ongoing management", href: "/services/wix/management" },
+    ],
   },
   {
     title: "Shopify\nDevelopment",
+    description:
+      "Storefronts, custom themes, headless builds, and checkout experiences on Shopify. Built to sell.",
     href: "/services/shopify",
-    icon: ShoppingBag,
-    image: serviceImages[3],
+    logo: `https://img.logo.dev/shopify.com?token=${token}&format=png`,
+    items: [
+      { label: "Store design & development", href: "/services/shopify/design" },
+      { label: "Headless Shopify (Hydrogen)", href: "/services/shopify/headless" },
+      { label: "Custom apps & integrations", href: "/services/shopify/apps" },
+      { label: "Migration & management", href: "/services/shopify/migration" },
+    ],
   },
   {
     title: "Full-Stack\nDevelopment",
+    description:
+      "Custom applications, APIs, and integrations. React, Next.js, Python, Node. When off-the-shelf isn't enough, we build what is.",
     href: "/services/development",
     icon: Code2,
-    image: serviceImages[4],
+    items: [
+      { label: "Custom web applications", href: "/services/development/apps" },
+      { label: "API development & integrations", href: "/services/development/api" },
+      { label: "Front-end & back-end engineering", href: "/services/development/engineering" },
+      { label: "Technical architecture", href: "/services/development/architecture" },
+    ],
   },
   {
     title: "Go-to-Market\nServices",
+    description:
+      "Landing pages, email sequences, lead-generation systems, and the operational backbone to make revenue predictable. Built on data, not assumptions.",
     href: "/services/gtm",
     icon: TrendingUp,
-    image: serviceImages[5],
+    items: [
+      { label: "Landing page & funnel builds", href: "/services/gtm/landing-pages" },
+      { label: "Email marketing infrastructure", href: "/services/gtm/email" },
+      { label: "Lead generation systems", href: "/services/gtm/lead-gen" },
+      { label: "Analytics & tracking setup", href: "/services/gtm/analytics" },
+    ],
   },
 ];
 
@@ -83,16 +113,16 @@ export const Services = () => {
           </p>
         </div>
 
-        {/* Services Card Grid */}
+        {/* Services Card Grid — 3 rows × 2 columns */}
         <Card className="mt-8 rounded-3xl md:mt-12 lg:mt-20">
           <CardContent className="flex flex-col p-0">
             {/* Row 1 */}
             <div className="flex max-md:flex-col">
-              {services.slice(0, 3).map((service, i) => (
+              {services.slice(0, 2).map((service, i) => (
                 <ServiceItem
                   key={service.title}
                   service={service}
-                  showDivider={i < 2}
+                  showDivider={i < 1}
                 />
               ))}
             </div>
@@ -104,11 +134,27 @@ export const Services = () => {
             </div>
             {/* Row 2 */}
             <div className="flex max-md:flex-col">
-              {services.slice(3, 6).map((service, i) => (
+              {services.slice(2, 4).map((service, i) => (
                 <ServiceItem
                   key={service.title}
                   service={service}
-                  showDivider={i < 2}
+                  showDivider={i < 1}
+                />
+              ))}
+            </div>
+            <div className="relative hidden md:block">
+              <DashedLine orientation="horizontal" />
+            </div>
+            <div className="relative block md:hidden">
+              <DashedLine orientation="horizontal" />
+            </div>
+            {/* Row 3 */}
+            <div className="flex max-md:flex-col">
+              {services.slice(4, 6).map((service, i) => (
+                <ServiceItem
+                  key={service.title}
+                  service={service}
+                  showDivider={i < 1}
                 />
               ))}
             </div>
@@ -129,29 +175,54 @@ function ServiceItem({
   const Icon = service.icon;
   return (
     <div className="flex flex-1 max-md:flex-col">
-      <div className="flex-1 p-4 pe-0! md:p-6">
-        <div className="relative aspect-[1.28/1] overflow-hidden">
-          <img
-            src={service.image}
-            alt={service.title}
-            className="object-cover object-left-top ps-4 pt-2"
-          />
-          <div className="from-background absolute inset-0 z-10 bg-linear-to-t via-transparent to-transparent" />
+      <div className="flex flex-1 flex-col p-6 md:p-10">
+        {/* Icon + Title */}
+        <div className="flex items-start gap-4">
+          {service.logo ? (
+            <div className="mt-1 grid size-8 shrink-0 place-items-center">
+              <img
+                src={service.logo}
+                alt={service.title}
+                className="max-h-full max-w-full object-contain"
+              />
+            </div>
+          ) : Icon ? (
+            <Icon className="text-foreground mt-1 size-7 shrink-0" />
+          ) : null}
+          <h3 className="font-display min-h-[2.5em] text-xl leading-tight font-bold tracking-tight whitespace-pre-line md:text-2xl">
+            {service.title}
+          </h3>
         </div>
 
+        <div className="flex-1">
+          {/* Description */}
+          <p className="text-muted-foreground mt-5 text-sm leading-relaxed md:text-base">
+            {service.description}
+          </p>
+
+          {/* Bullet list */}
+          <ul className="mt-6 space-y-3">
+            {service.items.map((item) => (
+              <li key={item.label} className="flex items-start gap-3">
+                <span className="bg-muted-foreground mt-2 size-1.5 shrink-0 rounded-full" />
+                <a
+                  href={item.href}
+                  className="text-muted-foreground hover:text-foreground text-sm transition-colors md:text-base"
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* CTA */}
         <a
           href={service.href}
-          className="group flex items-start justify-between gap-4 pe-4 pt-4 md:pe-6 md:pt-6"
+          className="group mt-8 inline-flex items-center gap-1.5 text-sm font-medium transition-opacity hover:opacity-75 md:text-base"
         >
-          <div className="flex items-start gap-3">
-            <Icon className="text-foreground mt-1 size-5 shrink-0" />
-            <h3 className="font-display min-h-[2.5em] max-w-60 text-2xl leading-tight font-bold tracking-tight whitespace-pre-line">
-              {service.title}
-            </h3>
-          </div>
-          <div className="mt-1 shrink-0 rounded-full border p-2">
-            <ChevronRight className="size-6 transition-transform group-hover:translate-x-1 lg:size-9" />
-          </div>
+          View {service.title.split("\n")[0]} services
+          <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
         </a>
       </div>
       {showDivider && (
