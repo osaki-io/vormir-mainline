@@ -34,7 +34,7 @@ export const BlogPreview = () => {
           FROM THE BLOG
         </span>
       </div>
-      <section className="pb-28 lg:pb-32">
+      <section className="pb-10 lg:pb-16">
         <div className="container">
           {/* Header */}
           <div className="mt-10 flex items-end justify-between lg:mt-24">

@@ -19,7 +19,7 @@ const tools = [
 
 export const TechStack = () => {
   return (
-    <section className="py-28 lg:py-32">
+    <section className="pb-28 pt-10 lg:pb-32 lg:pt-16">
       <div className="container">
         {/* Dashed line + label */}
         <div className="relative flex items-center justify-center">
