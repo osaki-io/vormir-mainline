@@ -1,6 +1,4 @@
-import { ArrowRight, ArrowUpRight, Github, Linkedin, Twitter } from "lucide-react";
-
-import { Button } from "@/components/ui/button";
+import { Github, Linkedin, Twitter } from "lucide-react";
 
 const serviceLinks = [
   { name: "Webflow Development", href: "/services/webflow" },
@@ -39,121 +37,17 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer>
-      {/* CTA Section */}
-      <div className="pt-28 lg:pt-32">
-        <div className="container space-y-3 text-center">
-          <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-            Let's build something that lasts
-          </h2>
-          <p className="text-muted-foreground mx-auto max-w-xl leading-snug text-balance">
-            Book a free discovery call. We'll audit your current setup and show you exactly where we can help you move faster.
-          </p>
-          <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Button size="lg" asChild>
-              <a href="/contact">Book a call</a>
-            </Button>
-            <Button size="lg" variant="ghost" asChild>
-              <a href="/services" className="group inline-flex items-center gap-1.5">
-                View services
-                <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
-              </a>
-            </Button>
-          </div>
-        </div>
-      </div>
-
-      {/* Link Grid */}
-      <div className="container mt-24 md:mt-32">
-        <div className="grid grid-cols-2 gap-10 md:grid-cols-4 lg:gap-16">
-          {/* Services */}
-          <div className="col-span-2 md:col-span-1">
-            <h3 className="font-mono text-sm font-medium tracking-wide uppercase">
-              Services
-            </h3>
-            <ul className="mt-6 space-y-3">
-              {serviceLinks.map((service) => (
-                <li key={service.name}>
-                  <a
-                    href={service.href}
-                    className="text-sm font-medium transition-opacity hover:opacity-75"
-                  >
-                    {service.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Company */}
+    <footer className="container pb-10 pt-24 md:pt-32">
+      {/* Link Grid — 5 columns: Brand + Services + Company + Resources + Legal */}
+      <div className="grid grid-cols-2 gap-10 md:grid-cols-6 lg:gap-12">
+        {/* Brand column */}
+        <div className="col-span-2 flex flex-col gap-6">
           <div>
-            <h3 className="font-mono text-sm font-medium tracking-wide uppercase">
-              Company
-            </h3>
-            <ul className="mt-6 space-y-3">
-              {companyLinks.map((item) => (
-                <li key={item.name}>
-                  <a
-                    href={item.href}
-                    className="text-sm font-medium transition-opacity hover:opacity-75"
-                  >
-                    {item.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Resources */}
-          <div>
-            <h3 className="font-mono text-sm font-medium tracking-wide uppercase">
-              Resources
-            </h3>
-            <ul className="mt-6 space-y-3">
-              {resourceLinks.map((item) => (
-                <li key={item.name}>
-                  <a
-                    href={item.href}
-                    className="text-sm font-medium transition-opacity hover:opacity-75"
-                  >
-                    {item.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Legal */}
-          <div>
-            <h3 className="font-mono text-sm font-medium tracking-wide uppercase">
-              Legal
-            </h3>
-            <ul className="mt-6 space-y-3">
-              {legalLinks.map((item) => (
-                <li key={item.name}>
-                  <a
-                    href={item.href}
-                    className="text-muted-foreground hover:text-foreground text-sm transition-colors"
-                  >
-                    {item.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      {/* Bottom Bar */}
-      <div className="container mt-20 pb-10">
-        <div className="flex flex-col items-center justify-between gap-6 border-t pt-10 md:flex-row">
-          <div className="flex flex-col items-center gap-1 md:items-start">
             <span className="text-lg font-bold tracking-tight">Nexora</span>
-            <span className="text-muted-foreground text-xs">
+            <p className="text-muted-foreground mt-1 text-sm">
               Consulting & Engineering
-            </span>
+            </p>
           </div>
-
           <div className="flex items-center gap-4">
             {socialLinks.map((social) => {
               const Icon = social.icon;
@@ -163,7 +57,7 @@ export function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-foreground inline-flex items-center gap-1 text-sm transition-colors"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
                   aria-label={social.name}
                 >
                   <Icon className="size-5" />
@@ -172,10 +66,88 @@ export function Footer() {
             })}
           </div>
         </div>
-        <p className="text-muted-foreground mt-6 text-center text-xs md:text-left">
-          © {new Date().getFullYear()} Nexora. All rights reserved.
-        </p>
+
+        {/* Services */}
+        <div className="md:col-span-1">
+          <h3 className="font-mono text-sm font-medium tracking-wide uppercase">
+            Services
+          </h3>
+          <ul className="mt-6 space-y-3">
+            {serviceLinks.map((service) => (
+              <li key={service.name}>
+                <a
+                  href={service.href}
+                  className="text-sm font-medium transition-opacity hover:opacity-75"
+                >
+                  {service.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Company */}
+        <div className="md:col-span-1">
+          <h3 className="font-mono text-sm font-medium tracking-wide uppercase">
+            Company
+          </h3>
+          <ul className="mt-6 space-y-3">
+            {companyLinks.map((item) => (
+              <li key={item.name}>
+                <a
+                  href={item.href}
+                  className="text-sm font-medium transition-opacity hover:opacity-75"
+                >
+                  {item.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Resources */}
+        <div className="md:col-span-1">
+          <h3 className="font-mono text-sm font-medium tracking-wide uppercase">
+            Resources
+          </h3>
+          <ul className="mt-6 space-y-3">
+            {resourceLinks.map((item) => (
+              <li key={item.name}>
+                <a
+                  href={item.href}
+                  className="text-sm font-medium transition-opacity hover:opacity-75"
+                >
+                  {item.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Legal */}
+        <div className="md:col-span-1">
+          <h3 className="font-mono text-sm font-medium tracking-wide uppercase">
+            Legal
+          </h3>
+          <ul className="mt-6 space-y-3">
+            {legalLinks.map((item) => (
+              <li key={item.name}>
+                <a
+                  href={item.href}
+                  className="text-muted-foreground hover:text-foreground text-sm transition-colors"
+                >
+                  {item.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
+
+      {/* Copyright */}
+      <p className="text-muted-foreground mt-16 text-center text-xs">
+        © {new Date().getFullYear()} Nexora. All rights reserved.
+      </p>
     </footer>
   );
 }
