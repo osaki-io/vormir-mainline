@@ -1,4 +1,4 @@
-import { ArrowRight, BadgeCheck } from "lucide-react";
+import { ArrowRight, BadgeCheck, ChevronRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 
@@ -8,6 +8,15 @@ export const ServiceHero = () => {
       <div className="container flex flex-col justify-between gap-8 md:gap-14 lg:flex-row lg:gap-20">
         {/* Left side - Main content */}
         <div className="flex-1">
+          {/* Breadcrumb */}
+          <div className="mb-6 flex items-center gap-1.5 text-sm text-muted-foreground">
+            <a href="/services" className="transition-colors hover:text-foreground">
+              Services
+            </a>
+            <ChevronRight className="size-4" />
+            <span className="text-foreground">Webflow Development</span>
+          </div>
+
           <h1 className="text-foreground max-w-160 text-3xl tracking-tight md:text-4xl lg:text-5xl">
             Webflow sites built to convert.
           </h1>
