@@ -81,7 +81,7 @@ export const Logos = () => {
   ];
 
   return (
-    <section className="overflow-hidden pb-28 lg:pb-32">
+    <section className="overflow-hidden pb-10 lg:pb-16">
       <div className="container space-y-10 lg:space-y-16">
         <div className="text-center">
           <h2 className="mb-4 text-xl text-balance md:text-2xl lg:text-3xl">
