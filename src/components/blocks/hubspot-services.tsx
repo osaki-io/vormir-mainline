@@ -37,8 +37,18 @@ const services = [
 
 export const HubspotServices = () => {
   return (
-    <section className="pb-28 lg:pb-32">
+    <section className="pt-12 lg:pt-16 pb-28 lg:pb-32">
       <div className="container">
+        {/* Header */}
+        <div className="mx-auto max-w-4xl text-center">
+          <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
+            What We Do
+          </h2>
+          <p className="text-muted-foreground mx-auto mt-4 max-w-2xl leading-snug">
+            HubSpot implementation, done properly. From onboarding to ongoing management.
+          </p>
+        </div>
+
         <div className="mt-8 grid gap-6 sm:grid-cols-2 md:mt-12 lg:mt-20">
           {services.map((service) => {
             const Icon = service.icon;

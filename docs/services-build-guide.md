@@ -1,5 +1,23 @@
 # Service Pages — Developer Guide
 
+## Workflow (Read This First)
+
+**Clone → Compare/Reduce → Update Copy**
+
+When creating a new service page, follow this exact order:
+
+1. **Clone the reference page** (`webflow.astro`) — copy all 5 component files with new names
+2. **Compare & reduce** — look at the cloned components vs. what the new service actually needs. Remove sections the new page doesn't have (e.g., no FAQ, no "Our Work", no "With Every Build" prose). Keep layout, spacing, and structure identical to the reference.
+3. **Build and verify** — the page compiles and renders with placeholder copy
+4. **Update copy** — swap in real headings, descriptions, icons, and labels from the content doc
+5. **Build again** — final verification
+
+### Common Mistake
+
+Skipping step 2 and copying everything blindly — including sections the new service page doesn't need. Or worse: redesigning components during step 1 instead of cloning the structure faithfully. Clone the layout first, then decide what to remove, then write copy.
+
+---
+
 ## Quick Start
 
 To add a new service page (e.g., `/services/hubspot`):

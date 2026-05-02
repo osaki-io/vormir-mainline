@@ -6,7 +6,9 @@ export const HubspotHero = () => {
   return (
     <section className="py-28 lg:py-32 lg:pt-44">
       <div className="container flex flex-col justify-between gap-8 md:gap-14 lg:flex-row lg:gap-20">
+        {/* Left side - Main content */}
         <div className="flex-1">
+          {/* Breadcrumb */}
           <div className="mb-6 flex items-center gap-1.5 text-sm text-muted-foreground">
             <a href="/services" className="transition-colors hover:text-foreground">
               Services
@@ -27,16 +29,34 @@ export const HubspotHero = () => {
             <Button asChild>
               <a href="/contact">Book a call</a>
             </Button>
-            <Button variant="outline" asChild>
-              <a href="/contact">Contact us</a>
+            <Button
+              variant="outline"
+              className="from-background h-auto gap-2 bg-linear-to-r to-transparent shadow-md"
+              asChild
+            >
+              <a
+                href="/contact"
+                className="max-w-56 truncate text-start md:max-w-none"
+              >
+                Send a project brief
+                <ArrowRight className="stroke-3" />
+              </a>
             </Button>
           </div>
         </div>
 
-        <div className="flex flex-col gap-3 lg:mt-20 lg:w-72">
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <BadgeCheck className="text-primary size-5" />
-            <span>HubSpot Solutions Partner</span>
+        {/* Right side - Badge */}
+        <div className="relative flex flex-1 flex-col justify-center max-lg:pt-10 lg:pl-10">
+          <div className="flex items-center gap-3 rounded-2xl border p-6">
+            <BadgeCheck className="text-primary size-8 shrink-0" />
+            <div>
+              <div className="font-display text-lg font-bold tracking-tight">
+                HubSpot Solutions Partner
+              </div>
+              <p className="text-muted-foreground text-sm">
+                Certified partner since 2021
+              </p>
+            </div>
           </div>
         </div>
       </div>
