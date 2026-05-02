@@ -2,7 +2,7 @@
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 import { Background } from '@/components/background';
-import { FAQ } from '@/components/blocks/faq';
+import { ContactCTA } from '@/components/blocks/contact-cta';
 import { Features } from '@/components/blocks/features';
 import { Hero } from '@/components/blocks/hero';
 import { Logos } from '@/components/blocks/logos';
@@ -30,6 +30,6 @@ import DefaultLayout from '@/layouts/DefaultLayout.astro';
   <Testimonials client:only='react'/>
   <BlogPreview />
   <Background variant="bottom">
-    <FAQ client:only='react'/>
+    <ContactCTA client:load />
   </Background>
 </DefaultLayout>
