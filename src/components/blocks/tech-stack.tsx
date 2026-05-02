@@ -29,7 +29,7 @@ export const TechStack = () => {
           </span>
         </div>
 
-        <div className="mt-6 space-y-4 lg:mt-12">
+        <div className="mt-10 space-y-4 lg:mt-24">
           <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
             What we build with.
           </h2>

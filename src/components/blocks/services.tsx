@@ -104,7 +104,7 @@ export const Services = () => {
         </div>
 
         {/* Header */}
-        <div className="mx-auto mt-6 max-w-4xl text-center lg:mt-12">
+        <div className="mx-auto mt-10 max-w-4xl text-center lg:mt-24">
           <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
             Built for teams that ship
           </h2>
