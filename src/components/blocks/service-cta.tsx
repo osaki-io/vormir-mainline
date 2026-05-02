@@ -1,4 +1,4 @@
-import { ArrowRight, Mail } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 
 import { DashedLine } from "@/components/dashed-line";
 import { Button } from "@/components/ui/button";
@@ -31,11 +31,11 @@ export const ServiceCTA = () => {
             </Button>
             <Button size="lg" variant="outline" asChild>
               <a
-                href="mailto:hello@vormir.co"
+                href="/work"
                 className="group inline-flex items-center gap-2"
               >
-                <Mail className="size-4" />
-                Email us
+                Explore our work
+                <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </a>
             </Button>
           </div>
