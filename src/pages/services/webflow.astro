@@ -2,23 +2,22 @@
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 
 import { Background } from '@/components/background';
-import { ServiceHero } from '@/components/blocks/service-hero';
-import { ServiceCards } from '@/components/blocks/service-cards';
-import { PlatformBenefits } from '@/components/blocks/platform-benefits';
-import { ProcessSteps } from '@/components/blocks/process-steps';
-import { Features } from '@/components/blocks/features';
-import { ServiceCTA } from '@/components/blocks/service-cta';
+import { WebflowHero } from '@/components/blocks/webflow-hero';
+import { WebflowServices } from '@/components/blocks/webflow-services';
+import { WhyWebflow } from '@/components/blocks/why-webflow';
+import { HowWeWork } from '@/components/blocks/how-we-work';
+import { LetsTalk } from '@/components/blocks/lets-talk';
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
 ---
 
 <DefaultLayout title={`Webflow Development — ${SITE_TITLE}`} description={SITE_DESCRIPTION}>
   <Background className="via-muted to-muted/80">
-    <ServiceHero />
-    <ServiceCards />
+    <WebflowHero />
+    <WebflowServices />
   </Background>
-  <PlatformBenefits />
+  <WhyWebflow />
   <Background variant="bottom">
-    <ProcessSteps />
-    <ServiceCTA />
+    <HowWeWork />
+    <LetsTalk />
   </Background>
 </DefaultLayout>

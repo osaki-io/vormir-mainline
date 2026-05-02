@@ -8,7 +8,7 @@ const steps = [
   { number: "05", title: "Manage", line: "Ongoing support or handoff with team training." },
 ];
 
-export const ProcessSteps = () => {
+export const HowWeWork = () => {
   return (
     <section className="py-28 lg:py-32">
       <div className="container">

@@ -35,7 +35,7 @@ const benefits = [
   },
 ];
 
-export const PlatformBenefits = () => {
+export const WhyWebflow = () => {
   return (
     <section className="bg-background py-16 text-foreground md:py-24 lg:py-32">
       <div className="container">

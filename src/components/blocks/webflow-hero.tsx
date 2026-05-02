@@ -2,7 +2,7 @@ import { ArrowRight, BadgeCheck, ChevronRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 
-export const ServiceHero = () => {
+export const WebflowHero = () => {
   return (
     <section className="py-28 lg:py-32 lg:pt-44">
       <div className="container flex flex-col justify-between gap-8 md:gap-14 lg:flex-row lg:gap-20">

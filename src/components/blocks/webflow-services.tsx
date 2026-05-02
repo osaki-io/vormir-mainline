@@ -35,7 +35,7 @@ const services = [
   },
 ];
 
-export const ServiceCards = () => {
+export const WebflowServices = () => {
   return (
     <section className="pt-12 lg:pt-16 pb-28 lg:pb-32">
       <div className="container">

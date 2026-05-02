@@ -3,7 +3,7 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { DashedLine } from "@/components/dashed-line";
 import { Button } from "@/components/ui/button";
 
-export const ServiceCTA = () => {
+export const LetsTalk = () => {
   return (
     <section className="pt-12 lg:pt-16 pb-28 lg:pb-32">
       <div className="container">
