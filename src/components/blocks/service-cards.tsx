@@ -1,6 +1,5 @@
 import { ArrowRight, Layout, Database, ArrowLeftRight, Brain, Settings } from "lucide-react";
 
-import { DashedLine } from "@/components/dashed-line";
 import { Card, CardContent } from "@/components/ui/card";
 
 const services = [
@@ -40,14 +39,8 @@ export const ServiceCards = () => {
   return (
     <section className="pt-12 lg:pt-16 pb-28 lg:pb-32">
       <div className="container">
-        <div className="relative flex items-center justify-center">
-          <DashedLine className="text-muted-foreground" />
-          <span className="bg-muted text-muted-foreground absolute px-3 font-mono text-sm font-medium tracking-wide max-md:hidden">
-            CORE SERVICES
-          </span>
-        </div>
-
-        <div className="mx-auto mt-10 max-w-4xl text-center lg:mt-24">
+        {/* Header */}
+        <div className="mx-auto max-w-4xl text-center">
           <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
             What We Do
           </h2>
