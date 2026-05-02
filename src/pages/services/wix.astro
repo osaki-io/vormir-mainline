@@ -1,0 +1,23 @@
+---
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+
+import { Background } from '@/components/background';
+import { WixStudioHero } from '@/components/blocks/wix-studio-hero';
+import { WixStudioServices } from '@/components/blocks/wix-studio-services';
+import { WhyWixStudio } from '@/components/blocks/why-wix-studio';
+import { WixStudioProcess } from '@/components/blocks/wix-studio-process';
+import { WixStudioCTA } from '@/components/blocks/wix-studio-cta';
+import DefaultLayout from '@/layouts/DefaultLayout.astro';
+---
+
+<DefaultLayout title={`Wix Studio Development — ${SITE_TITLE}`} description={SITE_DESCRIPTION}>
+  <Background className="via-muted to-muted/80">
+    <WixStudioHero />
+    <WixStudioServices />
+  </Background>
+  <WhyWixStudio />
+  <Background variant="bottom">
+    <WixStudioProcess />
+    <WixStudioCTA />
+  </Background>
+</DefaultLayout>
