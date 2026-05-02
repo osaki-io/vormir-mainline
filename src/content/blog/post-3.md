@@ -5,6 +5,7 @@ pubDate: "Jul 15 2022"
 image: "https://images.unsplash.com/photo-1741610739548-29e17473f70b?q=80&w=1286&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 authorImage: "/avatar/avatar2.png"
 authorName: "Jane Doe"
+category: "Strategy"
 ---
 
 ## Finding Clarity in a Complex World

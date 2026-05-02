@@ -5,6 +5,7 @@ pubDate: "Jul 22 2022"
 image: "https://images.unsplash.com/photo-1741091756497-10c964acc4f6?q=80&w=1286&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 authorImage: "/avatar/avatar1.png"
 authorName: "John Doe"
+category: "Product"
 ---
 
 # A delicate balance between artistic vision and practical necessity

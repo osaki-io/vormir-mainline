@@ -14,6 +14,7 @@ const blog = defineCollection({
     image: z.string().optional(),
     authorImage: z.string().optional(),
     authorName: z.string().optional(),
+    category: z.enum(["Engineering", "Strategy", "Case Study", "Product", "Operations"]).optional(),
   }),
 });
 
