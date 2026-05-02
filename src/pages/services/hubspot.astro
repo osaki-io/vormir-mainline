@@ -1,0 +1,23 @@
+---
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+
+import { Background } from '@/components/background';
+import { HubspotHero } from '@/components/blocks/hubspot-hero';
+import { HubspotServices } from '@/components/blocks/hubspot-services';
+import { WhyHubspot } from '@/components/blocks/why-hubspot';
+import { HubspotProcess } from '@/components/blocks/hubspot-process';
+import { HubspotCTA } from '@/components/blocks/hubspot-cta';
+import DefaultLayout from '@/layouts/DefaultLayout.astro';
+---
+
+<DefaultLayout title={`HubSpot Implementation — ${SITE_TITLE}`} description={SITE_DESCRIPTION}>
+  <Background className="via-muted to-muted/80">
+    <HubspotHero />
+    <HubspotServices />
+  </Background>
+  <WhyHubspot />
+  <Background variant="bottom">
+    <HubspotProcess />
+    <HubspotCTA />
+  </Background>
+</DefaultLayout>
