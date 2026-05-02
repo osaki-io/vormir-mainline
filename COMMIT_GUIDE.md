@@ -24,6 +24,8 @@ git push
 
 - **NO changes without explicit approval** — wait for "ok build it" or similar
 - **Build locally first** — verify with `npm run build` before any commit
+- **User reviews locally BEFORE commit** — build passing ≠ looks good. Wait for "approve" or "commit"
+- **Always confirm before committing** — never auto-commit after build passes
 - **One change at a time** — don't batch multiple fixes/features
 - **Store images locally** — once fetched from external APIs, save to `/public/`
 - **One change per commit** — don't batch unrelated changes
