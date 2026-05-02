@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 export const ServiceCTA = () => {
   return (
-    <section className="py-28 lg:py-32">
+    <section className="pt-12 lg:pt-16 pb-28 lg:pb-32">
       <div className="container">
         {/* Dashed line */}
         <div className="relative flex items-center justify-center">

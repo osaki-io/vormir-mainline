@@ -38,7 +38,7 @@ const services = [
 
 export const ServiceCards = () => {
   return (
-    <section className="py-28 lg:py-32">
+    <section className="pt-12 lg:pt-16 pb-28 lg:pb-32">
       <div className="container">
         <div className="relative flex items-center justify-center">
           <DashedLine className="text-muted-foreground" />
