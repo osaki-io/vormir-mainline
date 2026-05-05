@@ -104,13 +104,15 @@ export const Services = () => {
         </div>
 
         {/* Header */}
-        <div className="mx-auto mt-10 max-w-4xl text-center lg:mt-24">
-          <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-            Built for teams that ship
-          </h2>
-          <p className="text-muted-foreground mx-auto mt-4 max-w-2xl leading-snug">
-            From no-code platforms to custom engineering, we help you move faster with the right stack.
-          </p>
+        <div className="mt-10 lg:mt-24">
+          <div className="max-w-4xl space-y-4">
+            <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
+              Built for teams that ship
+            </h2>
+            <p className="text-muted-foreground max-w-2xl leading-snug">
+              From no-code platforms to custom engineering, we help you move faster with the right stack.
+            </p>
+          </div>
         </div>
 
         {/* Services Card Grid — 3 rows × 2 columns */}
